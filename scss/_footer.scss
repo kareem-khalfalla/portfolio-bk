@@ -1,0 +1,38 @@
+footer {
+  border-top: 1px solid rgba(#333, 0.1);
+  box-shadow: 0px 7px 3px -3px rgba(#333, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social {
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      height: 50px;
+      width: 50px;
+      &:nth-child(1) {
+        margin-right: 20px;
+      }
+      a {
+        img {
+          width: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.powered {
+  p {
+    color: #999;
+    font-size: 14px;
+    span {
+      font-weight: bold;
+      columns: #333;
+    }
+  }
+}

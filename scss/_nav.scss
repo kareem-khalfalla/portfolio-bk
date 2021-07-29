@@ -1,0 +1,29 @@
+nav{
+    border-bottom: 1px solid rgba(#333,.1);
+    box-shadow: 0 3px 3px rgba(#333,.1);
+    ul{
+        display: flex;
+        li{
+            &:nth-child(1){
+                flex-grow: 1;
+            }
+            a{
+                text-transform: capitalize;
+                &:not(.logo){
+                    padding: .25rem .5rem;
+                    border-radius: 4px;
+                    border: 1px solid #999;
+                    transition: all .3s ease;
+                    &:hover,
+                    &:active{
+                        background-color: #999;
+                        color: #fff;
+                    }
+                }
+                &:last-child{
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
