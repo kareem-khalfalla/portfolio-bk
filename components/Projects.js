@@ -1,4 +1,4 @@
-const url = "http://localhost:8088/api/projects";
+const url = "https://kareem-khalfalla.herokuapp.com/api/projects";
 const Projects = async () => {
   const data = await fetch(url);
   const jsonData = await data.json();
