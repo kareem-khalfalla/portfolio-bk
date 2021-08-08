@@ -3,32 +3,81 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   font-family: "Black Han Sans", sans-serif;
   font-family: "Merriweather", serif;
 }
+
 body {
   display: grid;
   height: 100vh;
   grid-template-rows: auto 1fr auto;
   color: #333;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 li {
   list-style: none;
 }
+
+svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: darkgray;
+}
+
+dl {
+  padding: 1rem;
+}
+
+dt {
+  margin: .5rem 0;
+}
+
+dd {
+  color: darkgray;
+  font-weight: bold;
+  text-align: center;
+}
+
 .py-1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 .px-4 {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+
 .py-4 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.img-sm {
+  width: 25px;
+  height: 25px;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.active {
+  color: green;
+}
+
+.inactive {
+  color: crimson;
+}
+
+.in-progress {
+  color: coral;
 }

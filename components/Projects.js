@@ -1,39 +1,50 @@
 const url = "https://kareem-khalfalla.herokuapp.com/api/projects";
 const Projects = async () => {
-  const data = await fetch(url);
-  const jsonData = await data.json();
-
-  const project = jsonData
-    .map((item) => {
-      const temp = `
+    const response = await fetch(url);
+    const { data } = await response.json();
+    const project = data
+        .map((item) => {
+            const temp = `
             <div class="card">
-                <img src="${item.image}" />
+                <img src="${item.image}" alt="${item.title}" class="img-fluid" />
                 <div class="card-body">
-                    <h3>${item.title}</h3>
+                    <h3 title="app name">${item.title}</h3>
+                    <dl>
+                    <dt>technologies:</dt>
+                    <dd title="technologies used to built this app">
                     <ul>
-                        <li title="Technologies used to built this app">${
-                          item.tags.length > 0
-                            ? item.tags
-                                .map((tag) => `<span>${tag.name}</span>`)
-                                .join("")
-                            : ""
-                        }</li>
-                        <li title="Description">${item.description}</li>
-                        <li title="Created at">${item.created_at}</li>
+                    ${item.tags.length > 0
+                && item.tags
+                    .map((tag) => `<li>${tag}</li>`)
+                    .join("")
+
+                }
                     </ul>
+                    </dd>
+                        <dt>live preview:</dt>
+                        <dd title="live preview"><a href="${item.url}" target="_blank">visit</a></dd>
+                        <dt>status:</dt>
+                        <dd title="status" class="${item.status}">${item.status}</dd>
+                        <dt>description:</dt>
+                        <dd title="description">${item.description || ''}</dd>
+                        <dt>last modified at:</dt>
+                        <dd title="last modified at">${item.last_modified_at}</dd>
+                        <dt>author:</dt>
+                        <dd title="author">${item.author}</dd>
+                    </dl>
                 </div>
             </div>
         `;
-      return temp;
-    })
-    .join("");
+            return temp;
+        })
+        .join("");
 
-  const template = `
+    const template = `
         <div class="wrapper">
             ${project}
         </div>
     `;
 
-  return template;
+    return template;
 };
 export default Projects;

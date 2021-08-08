@@ -1,29 +1,76 @@
-nav{
-    border-bottom: 1px solid rgba(#333,.1);
-    box-shadow: 0 3px 3px rgba(#333,.1);
-    ul{
+.nav {
+    font-weight: 700;
+    border-bottom: 1px solid rgba(#333, .1);
+    text-transform: capitalize;
+
+    &-toggler {
+        position: absolute;
+        top: 17px;
+        right: 0;
+        margin: 0 1rem;
+        cursor: pointer;
+
+        @include mq(560px) {
+            display: none;
+        }
+
+        .menu {
+            margin-top: .2rem;
+        }
+
+        .close {
+            display: none;
+        }
+    }
+
+    &-checkbox {
+        display: none;
+    }
+
+    &-menu {
         display: flex;
-        li{
-            &:nth-child(1){
-                flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 1rem;
+
+        @include mq(560px) {
+            flex-direction: row;
+        }
+
+        li {
+            display: none;
+
+            @include mq(560px) {
+                display: block;
             }
-            a{
-                text-transform: capitalize;
-                &:not(.logo){
-                    padding: .25rem .5rem;
-                    border-radius: 4px;
-                    border: 1px solid #999;
-                    transition: all .3s ease;
-                    &:hover,
-                    &:active{
-                        background-color: #999;
-                        color: #fff;
-                    }
-                }
-                &:last-child{
-                    margin-right: 15px;
+
+            &:first-child {
+                margin-right: auto;
+                display: block;
+            }
+
+            a {
+                font-size: 1.2rem;
+
+                img {
+                    width: 2rem;
+                    border-radius: 10px;
                 }
             }
         }
+
     }
+}
+
+#nav-checkbox:checked~ul.nav-menu li {
+    display: block;
+}
+
+#nav-checkbox:checked~label.nav-toggler .close {
+    display: block;
+}
+
+#nav-checkbox:checked~label.nav-toggler .menu {
+    display: none;
 }
