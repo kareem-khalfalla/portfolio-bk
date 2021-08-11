@@ -2,11 +2,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-transform: capitalize;
+  color: inherit;
 }
 
 html {
   font-family: "Black Han Sans", sans-serif;
   font-family: "Merriweather", serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,6 +19,21 @@ body {
   color: #333;
 }
 
+input,
+button,
+textarea {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  resize: none;
+}
+p{
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -43,6 +61,15 @@ dd {
   color: darkgray;
   font-weight: bold;
   text-align: center;
+}
+
+section {
+  background-color: rgba(antiquewhite, .4);
+  box-shadow: 3px 3px 3px rgba(#333, .3);
+  border-radius: 30px;
+  margin: 2rem 12rem;
+  min-height: 360px;
+  padding: 2rem;
 }
 
 .py-1 {

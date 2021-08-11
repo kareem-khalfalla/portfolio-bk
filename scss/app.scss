@@ -1,7 +1,33 @@
-@import
-"./mixins",
+@import "./mixins",
 "./general",
 "./nav",
-"./main";
+"./main",
+"./welcome",
+"./technologies",
+"./about",
+"./footer";
 // "./card";
-// "./footer"
+
+#scrollTop {
+    position: fixed;
+    bottom: 800px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #fff url('https://cdn1.iconfinder.com/data/icons/interface-travel-and-environment/64/chevron-interface-up-arrow-navigate-256.png');
+    border-radius: 50%;
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 999;
+    transition: .4s;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 6px 12px rgba(#000, .25);
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        bottom: 40px;
+    }
+}

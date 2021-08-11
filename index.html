@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <div id="scrollTop"></div>
   <nav class="nav">
     <input type="checkbox" id="nav-checkbox" class="nav-checkbox" >
     <label for="nav-checkbox" class="nav-toggler">
@@ -27,27 +28,90 @@
     </label>
     <ul class="nav-menu">
       <li>
-        <a href="/">
+        <a href="#welcome">
           <img src="https://cdn2.iconfinder.com/data/icons/metro-ui-icon-set/512/K.png" alt="logo">
+          <span>portfolio</span>
         </a>
       </li>
       <li>
-        <a href="/about">about</a>
+        <a href="#projects">projects</a>
       </li>
       <li>
-        <a href="/contact">contact</a>
+        <a href="#technologies">technologies</a>
       </li>
       <li>
-        <a href="/team">team</a>
+        <a href="#about-me">about</a>
+      </li>
+      <li>
+        <a href="#contact">contact</a>
       </li>
     </ul>
   </nav>
   <main class="px-4 py-4">
+    <section id="welcome">
+      <h1>welcome to my personal portfolio</h1>
+      <p>the purpose of this website is to showcase and demonstrate my skills and what is done by my self.</p>
+      <button>see more</button>
+    </section>
     <section id="projects"></section>
+    <section id="technologies">
+      <h1>technologies</h1>
+      <p>i've worked with the two phases of web development from back-end to design</p>
+      <div class="boxes">
+        <div class="box">
+          <img src="https://cdn1.iconfinder.com/data/icons/soleicons-line-vol-1/64/reactjs_javascript_library_atom_atomic_react-256.png" alt="">
+          <h3>front-end</h3>
+          <span>experience with:</span>
+          <span>reactjs</span>
+        </div>
+        <div class="box">
+          <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/194_Laravel_logo_logos-256.png" alt="">
+          <h3>back-end</h3>
+          <span>experience with:</span>
+          <span>laravel and databases</span>
+        </div>
+        <div class="box">
+          <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-256.png" alt="">
+          <h3>UI/UX</h3>
+          <span>experience with:</span>
+          <span>figma</span>
+        </div>
+      </div>
+    </section>
+    <section id="about-me">
+      <h1>about me</h1>
+      <p>i am a self-taught back-end web developer,
+        responsible for server-side web application logic and integration of the work front-end developers do,
+        usually write the web services and APIs used by front-end developers and mobile application developers.</p>
+        <div class="boxes">
+          <div class="box">
+            <span>2017</span>
+            <span>started with my journey</span>
+          </div>
+          <div class="box">
+            <span>2018</span>
+            <span>worked as a freelance</span>
+          </div>
+          <div class="box">
+            <span>2019</span>
+            <span>shared my projects with the world</span>
+          </div>
+        </div>
+    </section>
+    <!-- <section id="contact">
+      <form action="post">
+        <div class="input-group">
+          <input type="text" name="name" placeholder="Your name">
+          <input type="text" name="company_name" placeholder="Your company name">
+          <textarea placeholder="Your message..."></textarea>
+          <button>send</button>
+        </div>
+      </form>
+    </section> -->
   </main>
   <footer class="py-1 px-4">
     <div class="powered">
-      <p>Powered and maintained by: <span>Kareem Khalfalla</span></p>
+      <p>powered and maintained by: <span>kareem khalfalla</span></p>
     </div>
     <div class="social">
       <ul>

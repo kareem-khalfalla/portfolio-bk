@@ -1,7 +1,6 @@
 .nav {
     font-weight: 700;
     border-bottom: 1px solid rgba(#333, .1);
-    text-transform: capitalize;
 
     &-toggler {
         position: absolute;
@@ -52,10 +51,12 @@
 
             a {
                 font-size: 1.2rem;
-
+                display: flex;
+                align-items: center;
                 img {
                     width: 2rem;
                     border-radius: 10px;
+                    margin-right: 10px;
                 }
             }
         }

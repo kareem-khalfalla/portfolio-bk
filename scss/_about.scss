@@ -1,0 +1,26 @@
+#about-me{
+    h1{
+
+    }
+    p{
+        margin-top: 2rem;
+    }
+    .boxes{
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 4rem;
+        .box{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            span{
+                &:last-child {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
