@@ -2,19 +2,19 @@ const url = "https://kareem-khalfalla.herokuapp.com/api/projects";
 const Projects = async () => {
     const response = await fetch(url);
     const { data } = await response.json();
-    const project = data
-        .map((item) => {
+    const projects = data
+        .map((project) => {
             const temp = `
             <div class="card">
-                <img src="${item.image}" alt="${item.title}" class="img-fluid" />
+                <img src="${project.image_url}" alt="${project.title}" class="img-fluid" />
                 <div class="card-body">
-                    <h3 title="app name">${item.title}</h3>
+                    <h3 title="app name">${project.title}</h3>
                     <dl>
                     <dt>technologies:</dt>
                     <dd title="technologies used to built this app">
                     <ul>
-                    ${item.tags.length > 0
-                && item.tags
+                    ${project.tags.length > 0
+                && project.tags
                     .map((tag) => `<li>${tag}</li>`)
                     .join("")
 
@@ -22,15 +22,15 @@ const Projects = async () => {
                     </ul>
                     </dd>
                         <dt>live preview:</dt>
-                        <dd title="live preview"><a href="${item.url}" target="_blank">visit</a></dd>
+                        <dd title="live preview"><a href="${project.url}" target="_blank">visit</a></dd>
                         <dt>status:</dt>
-                        <dd title="status" class="${item.status}">${item.status}</dd>
+                        <dd title="status" class="${project.status}">${project.status}</dd>
                         <dt>description:</dt>
-                        <dd title="description">${item.description || ''}</dd>
+                        <dd title="description">${project.description || ''}</dd>
                         <dt>last modified at:</dt>
-                        <dd title="last modified at">${item.last_modified_at}</dd>
+                        <dd title="last modified at">${project.last_modified_at}</dd>
                         <dt>author:</dt>
-                        <dd title="author">${item.author}</dd>
+                        <dd title="author">${project.author}</dd>
                     </dl>
                 </div>
             </div>
@@ -41,7 +41,7 @@ const Projects = async () => {
 
     const template = `
         <div class="wrapper">
-            ${project}
+            ${projects}
         </div>
     `;
 
