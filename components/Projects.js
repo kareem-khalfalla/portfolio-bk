@@ -2,6 +2,7 @@ const url = "https://kareem-khalfalla.herokuapp.com/api/projects";
 const Projects = async () => {
     const response = await fetch(url);
     const { data } = await response.json();
+    
     const projects = data
         .map((project) => {
             const temp = `
