@@ -63,6 +63,12 @@ dd {
   text-align: center;
 }
 
+hr{
+  width: 75%;
+  margin: .5rem auto;
+  border: 3px solid #dadada;
+}
+
 section {
   background-color: rgba(antiquewhite, .4);
   box-shadow: 3px 3px 3px rgba(#333, .3);
@@ -87,6 +93,13 @@ section {
   padding-bottom: 4rem;
 }
 
+.flex{
+  display: flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+
 .img-sm {
   width: 25px;
   height: 25px;
@@ -107,4 +120,8 @@ section {
 
 .in-progress {
   color: coral;
+}
+.disabled{
+  pointer-events: none;
+  opacity: .5;
 }

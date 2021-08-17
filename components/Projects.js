@@ -2,7 +2,7 @@ const url = "https://kareem-khalfalla.herokuapp.com/api/projects";
 const Projects = async () => {
     const response = await fetch(url);
     const { data } = await response.json();
-    
+
     const projects = data
         .map((project) => {
             const temp = `
@@ -26,9 +26,12 @@ const Projects = async () => {
                     <dd title="description">${project.description || ''}</dd>
                     <dt>last modified at:</dt>
                     <dd title="last modified at">${project.last_modified_at}</dd>
+                    <hr />
+                        <div class="flex justify-between">
+                            <span title="live preview" class="${project.status === 'inactive' ? 'disabled' : ''}"><a href="${project.url}" target="_blank">preview</a></span>
+                            <span title="status" class="${project.status}">${project.status}</span>
+                        </div>
                     </dl>
-                    <span title="live preview"><a href="${project.url}" target="_blank">visit</a></span>
-                    <span title="status" class="${project.status}">${project.status}</span>
                 </div>
             </div>
         `;
